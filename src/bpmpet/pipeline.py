@@ -42,8 +42,8 @@ ALIASES = {
     "operador": {"operador", "empresa_operadora", "concessionario"},
     "petroleo_bbl_dia": {
         "petroleo_bbl_dia", "producao_de_petroleo_bbl_dia", "petroleo_bbl_d",
-        "oleo_bbl_dia", "producao_de_oleo_bbl_dia",
     },
+    "oleo_bbl_dia": {"oleo_bbl_dia", "producao_de_oleo_bbl_dia"},
     "gas_mm3_dia": {
         "gas_mm3_dia", "producao_de_gas_natural_mm3_dia", "gas_natural_mm3_dia",
         "producao_de_gas_mm3_dia",
@@ -181,14 +181,21 @@ def transformar(df: pd.DataFrame, resolvidas: dict, competencia: str,
     tarefa (contagens, schema, transformacoes)."""
     antes = df.shape
     out = df.rename(columns=resolvidas).copy()
+    out = out.loc[:, ~out.columns.duplicated()]
     out = out[[c for c in out.columns if c in ALIASES]]
     out["bacia_norm"] = (
         out["bacia"].astype(str).str.upper().map(lambda x: _snake(x).upper())
     )
-    out = out[out["bacia_norm"].isin({_snake(b).upper() for b in BACIAS_ESCOPO})]
+    # conversao numerica em formato brasileiro (milhar '.', decimal ',')
     for c in ("petroleo_bbl_dia", "gas_mm3_dia", "agua_bbl_dia", "grau_api"):
         if c in out.columns:
-            out[c] = pd.to_numeric(out[c], errors="coerce")
+            serie = out[c]
+            if serie.dtype == object:
+                serie = (serie.astype(str)
+                              .str.replace(".", "", regex=False)
+                              .str.replace(",", ".", regex=False))
+            out[c] = pd.to_numeric(serie, errors="coerce")
+    out = out[out["bacia_norm"].isin({_snake(b).upper() for b in BACIAS_ESCOPO})]
     out["competencia"] = competencia
     if lineage:
         colmap = {c: [orig] for orig, c in resolvidas.items()

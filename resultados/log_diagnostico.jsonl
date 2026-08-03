@@ -1,0 +1,10 @@
+{"ts": "2026-08-03T15:18:51", "task_id": "PIP.T2B", "competencia": "exp_coluna_bacia_renomeada", "tipo": "falha_validacao", "mensagem": "faltantes=['bacia']; nulos={}"}
+{"ts": "2026-08-03T15:18:51", "task_id": "PIP.T2B", "competencia": "exp_nulos_na_chave_campo", "tipo": "falha_validacao", "mensagem": "faltantes=[]; nulos={'bacia': 2, 'campo': 411}"}
+{"ts": "2026-08-03T15:18:51", "task_id": "PIP.T2B", "competencia": "exp_tipo_invalido_petroleo", "tipo": "falha_validacao", "mensagem": "faltantes=[]; nulos={'bacia': 2, 'campo': 2}"}
+{"ts": "2026-08-03T15:18:51", "task_id": "PIP.T2B", "competencia": "exp_bacias_fora_do_escopo", "tipo": "falha_validacao", "mensagem": "faltantes=[]; nulos={'campo': 2}"}
+{"ts": "2026-08-03T15:18:51", "task_id": "PIP.T2B", "competencia": "exp_operador_ausente", "tipo": "falha_validacao", "mensagem": "faltantes=['operador']; nulos={}"}
+{"ts": "2026-08-03T15:20:37", "task_id": "PIP.T2B", "competencia": "exp_coluna_bacia_renomeada", "tipo": "falha_validacao", "mensagem": "faltantes=['bacia']; nulos={}"}
+{"ts": "2026-08-03T15:20:37", "task_id": "PIP.T2B", "competencia": "exp_nulos_na_chave_campo", "tipo": "falha_validacao", "mensagem": "faltantes=[]; nulos={'campo': 409}"}
+{"ts": "2026-08-03T15:20:37", "task_id": "PIP.T3", "competencia": "exp_tipo_invalido_petroleo", "tipo": "coercao_numerica", "mensagem": "100% de valores nao numericos"}
+{"ts": "2026-08-03T15:20:37", "task_id": "PIP.T3", "competencia": "exp_bacias_fora_do_escopo", "tipo": "escopo_vazio", "mensagem": "0 linhas apos filtro de bacias"}
+{"ts": "2026-08-03T15:20:37", "task_id": "PIP.T2B", "competencia": "exp_operador_ausente", "tipo": "falha_validacao", "mensagem": "faltantes=['operador']; nulos={}"}
