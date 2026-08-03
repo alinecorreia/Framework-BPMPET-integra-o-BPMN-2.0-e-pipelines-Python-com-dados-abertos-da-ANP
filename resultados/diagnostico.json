@@ -1,6 +1,6 @@
 {
   "falhas_injetadas": 5,
-  "taxa_localizacao_correta_pct": 60.0,
+  "taxa_localizacao_correta_pct": 100.0,
   "media_artefatos_com_matriz": 1.0,
   "media_artefatos_sem_matriz": 2.4,
   "casos": [
@@ -23,17 +23,17 @@
     {
       "falha": "tipo_invalido_petroleo",
       "gabarito": "PIP.T3",
-      "apontado": "PIP.T2",
-      "acerto": false,
-      "artefatos_com_matriz": null,
+      "apontado": "PIP.T3",
+      "acerto": true,
+      "artefatos_com_matriz": 1,
       "artefatos_sem_matriz": 3
     },
     {
       "falha": "bacias_fora_do_escopo",
       "gabarito": "PIP.T3",
-      "apontado": "PIP.T2",
-      "acerto": false,
-      "artefatos_com_matriz": null,
+      "apontado": "PIP.T3",
+      "acerto": true,
+      "artefatos_com_matriz": 1,
       "artefatos_sem_matriz": 3
     },
     {
