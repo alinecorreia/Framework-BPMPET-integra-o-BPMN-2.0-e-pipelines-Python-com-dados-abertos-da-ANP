@@ -1,0 +1,48 @@
+{
+  "falhas_injetadas": 5,
+  "taxa_localizacao_correta_pct": 60.0,
+  "media_artefatos_com_matriz": 1.0,
+  "media_artefatos_sem_matriz": 2.4,
+  "casos": [
+    {
+      "falha": "coluna_bacia_renomeada",
+      "gabarito": "PIP.T2",
+      "apontado": "PIP.T2",
+      "acerto": true,
+      "artefatos_com_matriz": 1,
+      "artefatos_sem_matriz": 2
+    },
+    {
+      "falha": "nulos_na_chave_campo",
+      "gabarito": "PIP.T2",
+      "apontado": "PIP.T2",
+      "acerto": true,
+      "artefatos_com_matriz": 1,
+      "artefatos_sem_matriz": 2
+    },
+    {
+      "falha": "tipo_invalido_petroleo",
+      "gabarito": "PIP.T3",
+      "apontado": "PIP.T2",
+      "acerto": false,
+      "artefatos_com_matriz": null,
+      "artefatos_sem_matriz": 3
+    },
+    {
+      "falha": "bacias_fora_do_escopo",
+      "gabarito": "PIP.T3",
+      "apontado": "PIP.T2",
+      "acerto": false,
+      "artefatos_com_matriz": null,
+      "artefatos_sem_matriz": 3
+    },
+    {
+      "falha": "operador_ausente",
+      "gabarito": "PIP.T2",
+      "apontado": "PIP.T2",
+      "acerto": true,
+      "artefatos_com_matriz": 1,
+      "artefatos_sem_matriz": 2
+    }
+  ]
+}

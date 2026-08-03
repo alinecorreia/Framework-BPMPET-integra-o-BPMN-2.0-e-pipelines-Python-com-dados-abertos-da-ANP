@@ -1,0 +1,16 @@
+{
+  "traces_avaliados": 12,
+  "fitness_medio": 1.0,
+  "pct_traces_aderentes": 100.0,
+  "alignments": {
+    "disponivel": true,
+    "fitness_medio": 1.0,
+    "traces_com_desvio": 0
+  },
+  "detalhe": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  }
+}
