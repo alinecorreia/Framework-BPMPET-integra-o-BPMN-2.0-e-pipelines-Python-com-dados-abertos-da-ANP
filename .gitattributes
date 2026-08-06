@@ -1,0 +1,3 @@
+resultados/** linguist-generated=true
+dags/** linguist-vendored=false
+*.html linguist-detectable=false
