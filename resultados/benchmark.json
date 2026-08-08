@@ -15,16 +15,16 @@
     "mb_baixados": 4.21
   },
   "M2_desempenho": {
-    "tempo_total_s": 25.77,
-    "tempo_medio_por_competencia_s": 2.15,
+    "tempo_total_s": 23.15,
+    "tempo_medio_por_competencia_s": 1.93,
     "media_por_etapa_s": {
-      "t_ingestao": 1.367,
+      "t_ingestao": 1.354,
       "t_validacao": 0.002,
-      "t_transf": 0.723,
-      "t_kpis": 0.023,
+      "t_transf": 0.518,
+      "t_kpis": 0.021,
       "t_persist": 0.008
     },
-    "throughput_registros_por_s": 4777.7
+    "throughput_registros_por_s": 5318.8
   },
   "M3_memoria": {
     "pico_alocacao_mb": 18.5
@@ -36,8 +36,8 @@
   "M5_idempotencia": {
     "testado": true,
     "competencia": "2022-01",
-    "hash_1": "6a9974cec70db33b",
-    "hash_2": "6a9974cec70db33b",
+    "hash_1": "4395ce68c368c260",
+    "hash_2": "4395ce68c368c260",
     "identicos": true
   },
   "execucoes": [
@@ -48,13 +48,13 @@
       "bytes": 364845,
       "linhas_brutas": 11786,
       "linhas_escopo": 1516,
-      "t_ingestao": 2.1056977000007464,
-      "t_validacao": 0.00222079000013764,
-      "t_transf": 0.8632830400001694,
-      "t_kpis": 0.028563910000229953,
-      "t_persist": 0.017136249000031967,
+      "t_ingestao": 1.6449814139996306,
+      "t_validacao": 0.00203227099882497,
+      "t_transf": 0.5532891530001507,
+      "t_kpis": 0.021117928999956348,
+      "t_persist": 0.008540243999959785,
       "linhas_metadados_removidas": 6,
-      "hash": "6a9974cec70db33b517ccd3fabb261ebf1ffdc88fac8ca0df09360075aa1d3c4"
+      "hash": "4395ce68c368c26044beda115940f7ff70ddc6f18ecc7827bf864f96d8d9245b"
     },
     {
       "competencia": "2022-02",
@@ -63,13 +63,13 @@
       "bytes": 373435,
       "linhas_brutas": 11862,
       "linhas_escopo": 1507,
-      "t_ingestao": 1.9854334379997454,
-      "t_validacao": 0.0027481720007926924,
-      "t_transf": 0.8539888699997391,
-      "t_kpis": 0.02686294100021769,
-      "t_persist": 0.008469336999041843,
+      "t_ingestao": 1.6077772619992174,
+      "t_validacao": 0.001990287999433349,
+      "t_transf": 0.6176769100002275,
+      "t_kpis": 0.02009712599829072,
+      "t_persist": 0.0073063749987341,
       "linhas_metadados_removidas": 6,
-      "hash": "92069105fc3c4c1aab2fe753b6f765fe764afb8ee411d6149318b14ef948bc84"
+      "hash": "d1ed9a5865adb6a4013020445b1401c0ae3d860f908a7f3cfb21b5132e3c1b78"
     },
     {
       "competencia": "2022-03",
@@ -78,13 +78,13 @@
       "bytes": 394269,
       "linhas_brutas": 11847,
       "linhas_escopo": 1520,
-      "t_ingestao": 1.3729486400006863,
-      "t_validacao": 0.0019331439998495625,
-      "t_transf": 0.8585927209987858,
-      "t_kpis": 0.0203501910000341,
-      "t_persist": 0.00935848499830172,
+      "t_ingestao": 1.583477700000003,
+      "t_validacao": 0.0020056609992025187,
+      "t_transf": 0.5648556099986308,
+      "t_kpis": 0.02273581500048749,
+      "t_persist": 0.007260798000061186,
       "linhas_metadados_removidas": 6,
-      "hash": "5666767598e1359607ca286cdf9eaf765745d4c41699efd82245e39c78075322"
+      "hash": "34084423508569ce20fdc2f7fcdc7b20127d9a263c9660dcd1a8326f6d7f88b5"
     },
     {
       "competencia": "2022-04",
@@ -93,13 +93,13 @@
       "bytes": 389034,
       "linhas_brutas": 11884,
       "linhas_escopo": 1512,
-      "t_ingestao": 1.4156636360003176,
-      "t_validacao": 0.0019371399994270178,
-      "t_transf": 0.8497390530010307,
-      "t_kpis": 0.03436086900001101,
-      "t_persist": 0.007021503999567358,
+      "t_ingestao": 1.4499697539995395,
+      "t_validacao": 0.0019354070009285351,
+      "t_transf": 0.6132548079986009,
+      "t_kpis": 0.020017116999952123,
+      "t_persist": 0.0072211489987239474,
       "linhas_metadados_removidas": 6,
-      "hash": "4d7dcf89bcb7b6c2223e3f8ee26b3f55da8b2c2a2bda888d1f2101dab2bafb53"
+      "hash": "2e0ba75cc09d04d31d772c201e04fdb8f51f66216ed55ce363e7c33a11932a1a"
     },
     {
       "competencia": "2022-05",
@@ -108,13 +108,13 @@
       "bytes": 370385,
       "linhas_brutas": 11796,
       "linhas_escopo": 1526,
-      "t_ingestao": 1.349935653999637,
-      "t_validacao": 0.0019620259990915656,
-      "t_transf": 0.8433211949995894,
-      "t_kpis": 0.02018068999859679,
-      "t_persist": 0.007123012999727507,
+      "t_ingestao": 1.6147647149991826,
+      "t_validacao": 0.0019816759995592292,
+      "t_transf": 0.6031112700002268,
+      "t_kpis": 0.019739997000215226,
+      "t_persist": 0.007232194999232888,
       "linhas_metadados_removidas": 6,
-      "hash": "c57e972e44dda0f2473fbc855133b672134c61ceab255d84fe614b9c365b9b44"
+      "hash": "4e95dbc32bc3d154dc54a1a391e1798486c5c2b0b4f9e515a86cf2fd9085f7e8"
     },
     {
       "competencia": "2022-06",
@@ -123,13 +123,13 @@
       "bytes": 367457,
       "linhas_brutas": 11862,
       "linhas_escopo": 1521,
-      "t_ingestao": 1.1879755449990625,
-      "t_validacao": 0.0019400040000618901,
-      "t_transf": 0.8897697430002154,
-      "t_kpis": 0.02135262600131682,
-      "t_persist": 0.007132288001230336,
+      "t_ingestao": 1.1686165209994215,
+      "t_validacao": 0.001929258000018308,
+      "t_transf": 0.5957155320011225,
+      "t_kpis": 0.01986915800080169,
+      "t_persist": 0.00725802300075884,
       "linhas_metadados_removidas": 6,
-      "hash": "cb47155c11a217d872e36a8c7677e423d968655d64118a0f9660ed6d0995b3df"
+      "hash": "8efb9a0f8ede3c53c3bcf7d803e982885c23f39349a88243a0ff0fab66d2c6c3"
     },
     {
       "competencia": "2022-07",
@@ -138,13 +138,13 @@
       "bytes": 362076,
       "linhas_brutas": 11801,
       "linhas_escopo": 1544,
-      "t_ingestao": 1.3783749710000848,
-      "t_validacao": 0.0019459630002529593,
-      "t_transf": 0.7685362130014255,
-      "t_kpis": 0.0201217119993089,
-      "t_persist": 0.007260958000188111,
+      "t_ingestao": 1.484642614999757,
+      "t_validacao": 0.002130525999746169,
+      "t_transf": 0.6316005799999402,
+      "t_kpis": 0.019790512000327,
+      "t_persist": 0.0072268269996129675,
       "linhas_metadados_removidas": 6,
-      "hash": "db48bbc630cf9d2dea9507a16fe1e937811489eb3d804bf884840fdde79aec44"
+      "hash": "d51762aae3e6e203cb0b9a9fd5c0d91eadd02bf9c5701c67c550037d4d42eaa8"
     },
     {
       "competencia": "2022-08",
@@ -153,13 +153,13 @@
       "bytes": 357753,
       "linhas_brutas": 11733,
       "linhas_escopo": 1502,
-      "t_ingestao": 1.1973109749997093,
-      "t_validacao": 0.0019204049986001337,
-      "t_transf": 0.7399532540002838,
-      "t_kpis": 0.020200097998895217,
-      "t_persist": 0.0074336940015200526,
+      "t_ingestao": 1.224306391999562,
+      "t_validacao": 0.002020083000388695,
+      "t_transf": 0.5925524559988844,
+      "t_kpis": 0.01979963499979931,
+      "t_persist": 0.0072341679988312535,
       "linhas_metadados_removidas": 6,
-      "hash": "e246629c6de38af6465ce8813dd6fc4177a25baa394704743b45f683b0225207"
+      "hash": "b1b1ec4fd163e1f773ab4dcd9702a036960eafe9b93b5f806b5fe912d2acf6e4"
     },
     {
       "competencia": "2022-09",
@@ -168,13 +168,13 @@
       "bytes": 281203,
       "linhas_brutas": 7076,
       "linhas_escopo": 1199,
-      "t_ingestao": 1.1358686919993488,
-      "t_validacao": 0.0015594209999107989,
-      "t_transf": 0.46691851600007794,
-      "t_kpis": 0.01984647499921266,
-      "t_persist": 0.008110567001494928,
+      "t_ingestao": 1.1205544029999146,
+      "t_validacao": 0.0016108470008475706,
+      "t_transf": 0.35030849699978717,
+      "t_kpis": 0.019968335000157822,
+      "t_persist": 0.0072192560000985395,
       "linhas_metadados_removidas": 6,
-      "hash": "7eb7cce31634aedd357531e768fe3b714e042e7a63e9f52e547ce94f58d1153f"
+      "hash": "7f33ea2f857e4c2a51ce3240af5fc9da3227c33aef1df4d24d13f8427a0b012f"
     },
     {
       "competencia": "2022-10",
@@ -183,13 +183,13 @@
       "bytes": 326107,
       "linhas_brutas": 7698,
       "linhas_escopo": 1194,
-      "t_ingestao": 1.1652501349999511,
-      "t_validacao": 0.0017378140000801068,
-      "t_transf": 0.477289591999579,
-      "t_kpis": 0.01989891199991689,
-      "t_persist": 0.007322298000872252,
+      "t_ingestao": 1.1324817450004048,
+      "t_validacao": 0.0016568849987379508,
+      "t_transf": 0.38335486899995885,
+      "t_kpis": 0.019689941998876748,
+      "t_persist": 0.007118737001292175,
       "linhas_metadados_removidas": 6,
-      "hash": "9f996e8e2fd572133f79141fffd8247d0efb6b35f0b4cc084e645a9432be62f5"
+      "hash": "6b900ff927d55d5591fb7d66d3c20b5f156f2a370e02419aa03e9878239984c2"
     },
     {
       "competencia": "2022-11",
@@ -198,13 +198,13 @@
       "bytes": 312098,
       "linhas_brutas": 6858,
       "linhas_escopo": 1194,
-      "t_ingestao": 1.1094702909995249,
-      "t_validacao": 0.001565570000821026,
-      "t_transf": 0.42744571399998676,
-      "t_kpis": 0.020159788000455592,
-      "t_persist": 0.007334686999456608,
+      "t_ingestao": 1.101001303000885,
+      "t_validacao": 0.0015408429990202421,
+      "t_transf": 0.34144294200086733,
+      "t_kpis": 0.03521207000085269,
+      "t_persist": 0.014110055000855937,
       "linhas_metadados_removidas": 6,
-      "hash": "2d1fd65c10f1049b5dbe9f1d9637d18508bdfff3dc65a3c18af6648108d36bf8"
+      "hash": "c1797d5d9ca294f2e44a1b6e1b2c92daafb693032e5ad13c6efe61ba09f4ca29"
     },
     {
       "competencia": "2022-12",
@@ -213,13 +213,13 @@
       "bytes": 312617,
       "linhas_brutas": 6903,
       "linhas_escopo": 1193,
-      "t_ingestao": 0.9961499750006624,
-      "t_validacao": 0.002271495000968571,
-      "t_transf": 0.6335661909997725,
-      "t_kpis": 0.02003377199980605,
-      "t_persist": 0.007244513999467017,
+      "t_ingestao": 1.1121683979999943,
+      "t_validacao": 0.0015589089998684358,
+      "t_transf": 0.37351984700035246,
+      "t_kpis": 0.0195594999986497,
+      "t_persist": 0.009109636999710347,
       "linhas_metadados_removidas": 6,
-      "hash": "a1fd80ecd79d742442ef060abc6f0b85441da75adeda4d87ba5519352d572b1d"
+      "hash": "674c0a007eb18e7de5f5756fbcde9a819cfd805ce2867a9291d3bfef141fd7e5"
     }
   ]
 }

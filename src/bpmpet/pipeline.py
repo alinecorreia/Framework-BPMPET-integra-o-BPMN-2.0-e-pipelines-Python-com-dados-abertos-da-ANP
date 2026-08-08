@@ -187,14 +187,14 @@ def transformar(df: pd.DataFrame, resolvidas: dict, competencia: str,
         out["bacia"].astype(str).str.upper().map(lambda x: _snake(x).upper())
     )
     # conversao numerica em formato brasileiro (milhar '.', decimal ',')
+    def _num_br(serie):
+        txt = serie.astype(str).str.strip()
+        tem_virgula = txt.str.contains(",", regex=False)
+        br = txt.str.replace(".", "", regex=False).str.replace(",", ".", regex=False)
+        return pd.to_numeric(txt.where(~tem_virgula, br), errors="coerce")
     for c in ("petroleo_bbl_dia", "gas_mm3_dia", "agua_bbl_dia", "grau_api"):
         if c in out.columns:
-            serie = out[c]
-            if serie.dtype == object:
-                serie = (serie.astype(str)
-                              .str.replace(".", "", regex=False)
-                              .str.replace(",", ".", regex=False))
-            out[c] = pd.to_numeric(serie, errors="coerce")
+            out[c] = _num_br(out[c])
     out = out[out["bacia_norm"].isin({_snake(b).upper() for b in BACIAS_ESCOPO})]
     out["competencia"] = competencia
     if lineage:
