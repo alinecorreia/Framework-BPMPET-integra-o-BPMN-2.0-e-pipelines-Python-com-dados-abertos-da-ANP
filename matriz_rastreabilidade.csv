@@ -1,14 +1,14 @@
-id;elemento_bpmn;tipo_bpmn;componente_python;biblioteca;dag_task
-ANP.EV.01;Publicação mensal ANP;Evento de início (temporizador);Agendamento externo (cron);Scheduler;schedule_mensal
-ANP.T1;Publicar Boletim CSV;Tarefa de serviço;Fora do escopo (fonte externa);-;(disparo do DAG)
-PIP.EV.01;Receber arquivo CSV;Evento de início (mensagem);processar_competencia();Python nativo;task_ingestao
-PIP.T1;Ingerir CSV via HTTP;Tarefa de serviço;ingerir_dados() / baixar_zip();requests;task_ingestao
-PIP.GW1;Arquivo disponível?;Gateway exclusivo;try/except em processar_competencia();Python nativo;branch_arquivo_disponivel
-PIP.T1B;Registrar erro de ingestão;Tarefa de serviço;registrar_erro('PIP.T1B');Python nativo;task_registrar_erro_ingestao
-PIP.T2;Validar schema;Tarefa de serviço;validar_schema();pandas;task_validar
-PIP.GW2;Dados válidos?;Gateway exclusivo;if not val.aprovado;Python nativo;branch_dados_validos
-PIP.T2B;Registrar erro de validação;Tarefa de serviço;registrar_erro('PIP.T2B');Python nativo;task_registrar_erro_validacao
-PIP.T3;Transformar e padronizar;Tarefa de serviço;transformar();pandas;task_transformar
-PIP.T4;Calcular indicadores;Tarefa de serviço;calcular_kpis();pandas;task_kpis
-PIP.T5;Gerar relatório;Tarefa de serviço;gerar_relatorio();plotly;task_relatorio
-PIP.EV.FIM;Fim com sucesso;Evento de fim;retorno status=ok;Python nativo;(fim do DAG)
+id;elemento_bpmn;tipo_bpmn;componente_python;biblioteca
+ANP.EV.01;Publicação mensal ANP;Evento de início (temporizador);Agendamento externo (cron);Scheduler
+ANP.T1;Publicar Boletim CSV;Tarefa de serviço;Fora do escopo (fonte externa);-
+PIP.EV.01;Receber arquivo CSV;Evento de início (mensagem);processar_competencia();Python nativo
+PIP.T1;Ingerir CSV via HTTP;Tarefa de serviço;ingerir_dados() / baixar_zip();requests
+PIP.GW1;Arquivo disponível?;Gateway exclusivo;try/except em processar_competencia();Python nativo
+PIP.T1B;Registrar erro de ingestão;Tarefa de serviço;registrar_erro('PIP.T1B');Python nativo
+PIP.T2;Validar schema;Tarefa de serviço;validar_schema();pandas
+PIP.GW2;Dados válidos?;Gateway exclusivo;if not val.aprovado;Python nativo
+PIP.T2B;Registrar erro de validação;Tarefa de serviço;registrar_erro('PIP.T2B');Python nativo
+PIP.T3;Transformar e padronizar;Tarefa de serviço;transformar();pandas
+PIP.T4;Calcular indicadores;Tarefa de serviço;calcular_kpis();pandas
+PIP.T5;Gerar relatório;Tarefa de serviço;gerar_relatorio();plotly
+PIP.EV.FIM;Fim com sucesso;Evento de fim;retorno status=ok;Python nativo

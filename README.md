@@ -69,11 +69,9 @@ src/bpmpet/
   benchmark_zip.py            protocolo M1 a M5
   conformidade.py             protocolo M7, via PM4Py
   experimento_diagnostico.py  protocolo M6, injeção de falhas
-  motor_spark.py              comparativo entre motores (não executado)
 tests/                        testes das propriedades declaradas
-dags/                         correspondência BPMN → Airflow (demonstração)
 resultados/                   evidências de execução em JSON
-matriz_rastreabilidade.csv    elemento BPMN ↔ componente Python ↔ task do DAG
+matriz_rastreabilidade.csv    elemento BPMN ↔ componente Python
 monitoramento_anp.bpmn        modelo do processo
 ```
 
@@ -87,26 +85,6 @@ numérico ao longo da série, que passa do padrão brasileiro ao anglófono no
 meio de 2022: a coerção infere o dialeto valor a valor, e não por arquivo,
 porque assumir um único formato produz valores inflados em ordens de grandeza
 sem lançar exceção alguma.
-
-## Módulos projetados, ainda não executados
-
-Dois módulos aqui têm o mesmo estatuto: existem para demonstrar que a
-arquitetura comporta a extensão, e não para produzir resultado.
-
-`motor_spark.py` reescreve as transformações de `PIP.T3` e `PIP.T4` em PySpark
-sobre a mesma amostra, o que permitiria delimitar empiricamente o volume a
-partir do qual a migração compensa. Serve, enquanto isso, como evidência de
-que trocar o motor de processamento não exige tocar no modelo BPMN, já que a
-especificação independe da tecnologia de execução. Rodá-lo exige PySpark com
-JVM instalada.
-
-`dags/dag_bpmpet.py` projeta a mesma correspondência sobre um orquestrador de
-mercado: tarefas de serviço viram tasks, o evento temporizado vira o schedule
-mensal, gateways viram ramificações condicionais, e a coluna `dag_task` da
-matriz registra cada vínculo. Rodá-lo exige ambiente Airflow.
-
-Nenhum dos dois foi executado na avaliação, e nenhum número deles aparece na
-monografia. A execução de ambos consta entre os trabalhos futuros.
 
 ## Licença e uso
 
