@@ -1,5 +1,7 @@
 # BPMPET
 
+[![testes](https://github.com/alinecorreia/Framework-BPMPET-integra-o-BPMN-2.0-e-pipelines-Python-com-dados-abertos-da-ANP/actions/workflows/testes.yml/badge.svg)](https://github.com/alinecorreia/Framework-BPMPET-integra-o-BPMN-2.0-e-pipelines-Python-com-dados-abertos-da-ANP/actions/workflows/testes.yml)
+
 Framework de integração entre modelagem de processos em **BPMN 2.0** e
 **pipelines de dados em Python**, aplicado ao monitoramento da produção de
 petróleo e gás natural com dados abertos da ANP.
@@ -17,6 +19,10 @@ nos dois sentidos, e a aderência entre o especificado e o executado é medida,
 não afirmada.
 
 ## Como reproduzir
+
+A suite de testes roda automaticamente a cada push, pela configuracao em
+`.github/workflows/testes.yml`; o selo acima reflete o estado da ultima execucao.
+Para rodar localmente:
 
 ```bash
 pip install -r requirements.txt
