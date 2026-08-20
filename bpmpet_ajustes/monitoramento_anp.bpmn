@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  id="Defs_BPMPET" targetNamespace="http://bpmpet/anp">
+  <bpmn:process id="ProcPipeline" isExecutable="false">
+    <bpmn:startEvent id="ev_ini" name="Receber CSV">
+      <bpmn:outgoing>f01</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="t1" name="PIP.T1">
+      <bpmn:incoming>f01</bpmn:incoming><bpmn:outgoing>f02</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="gw1" name="Arquivo disponivel?">
+      <bpmn:incoming>f02</bpmn:incoming>
+      <bpmn:outgoing>f03</bpmn:outgoing><bpmn:outgoing>f04</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="t1b" name="PIP.T1B">
+      <bpmn:incoming>f04</bpmn:incoming><bpmn:outgoing>f05</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="ev_err1" name="Fim erro ingestao">
+      <bpmn:incoming>f05</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="t2" name="PIP.T2">
+      <bpmn:incoming>f03</bpmn:incoming><bpmn:outgoing>f06</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="gw2" name="Dados validos?">
+      <bpmn:incoming>f06</bpmn:incoming>
+      <bpmn:outgoing>f07</bpmn:outgoing><bpmn:outgoing>f08</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="t2b" name="PIP.T2B">
+      <bpmn:incoming>f08</bpmn:incoming><bpmn:outgoing>f09</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="ev_err2" name="Fim erro validacao">
+      <bpmn:incoming>f09</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="t3" name="PIP.T3">
+      <bpmn:incoming>f07</bpmn:incoming><bpmn:outgoing>f10</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="t4" name="PIP.T4">
+      <bpmn:incoming>f10</bpmn:incoming><bpmn:outgoing>f11</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="t5" name="PIP.T5">
+      <bpmn:incoming>f11</bpmn:incoming><bpmn:outgoing>f12</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="ev_fim" name="Fim sucesso">
+      <bpmn:incoming>f12</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="f01" sourceRef="ev_ini" targetRef="t1"/>
+    <bpmn:sequenceFlow id="f02" sourceRef="t1" targetRef="gw1"/>
+    <bpmn:sequenceFlow id="f03" sourceRef="gw1" targetRef="t2"/>
+    <bpmn:sequenceFlow id="f04" sourceRef="gw1" targetRef="t1b"/>
+    <bpmn:sequenceFlow id="f05" sourceRef="t1b" targetRef="ev_err1"/>
+    <bpmn:sequenceFlow id="f06" sourceRef="t2" targetRef="gw2"/>
+    <bpmn:sequenceFlow id="f07" sourceRef="gw2" targetRef="t3"/>
+    <bpmn:sequenceFlow id="f08" sourceRef="gw2" targetRef="t2b"/>
+    <bpmn:sequenceFlow id="f09" sourceRef="t2b" targetRef="ev_err2"/>
+    <bpmn:sequenceFlow id="f10" sourceRef="t3" targetRef="t4"/>
+    <bpmn:sequenceFlow id="f11" sourceRef="t4" targetRef="t5"/>
+    <bpmn:sequenceFlow id="f12" sourceRef="t5" targetRef="ev_fim"/>
+  </bpmn:process>
+</bpmn:definitions>
