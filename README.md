@@ -84,18 +84,15 @@ monitoramento_anp.bpmn        modelo do processo
 ## Armadilhas dos arquivos da ANP
 
 Quem for reprocessar essa fonte vai esbarrar em duas coisas que já estão
-tratadas aqui.
-
-A agência insere linhas de metadados no topo de cada arquivo interno, e a
+tratadas aqui. A agência insere linhas de metadados no topo de cada arquivo interno, e a
 concatenação dos três ambientes as multiplica. São seis registros por
 competência, 72 na série de 2022, o bastante para reprovar todas as doze na
 validação de schema. Ficam a cargo de `limpar_rodape_cabecalho()`, que registra
 a contagem como evidência auditável.
 
-A segunda é mais discreta e custou caro para achar. O dialeto numérico alterna
-no meio do ano: até junho os volumes vêm no padrão brasileiro, com vírgula
-decimal, e de julho em diante no padrão anglófono, com ponto. Seis das doze
-competências são afetadas. Um conversor que assuma um único formato produz,
+A segunda é mais discreta, o dialeto numérico alterna no meio do ano. Até junho os volumes 
+vêm no padrão brasileiro, com vírgula decimal, e de julho em diante no padrão anglófono, com ponto. 
+Seis das doze competências são afetadas. Um conversor que assuma um único formato produz,
 sobre o outro, valores inflados em ordens de grandeza sem lançar exceção
 alguma, então a coerção precisa inferir o dialeto valor a valor. O caso virou
 teste de regressão em `tests/`.
