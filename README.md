@@ -31,7 +31,7 @@ python -m bpmpet.experimento_diagnostico --csv dados/ARQUIVO.csv          # M6
 ```
 
 O benchmark baixa os doze pacotes mensais direto do portal da ANP a partir das
-URLs em `config_fontes.json` e leva cerca de 25 segundos numa máquina modesta.
+URLs em `config_fontes.json` e leva cerca de 25 segundos em média.
 Nenhum dado precisa ser obtido por outro meio, e nada além do `requirements.txt`
 precisa estar instalado.
 
@@ -41,7 +41,7 @@ O selo acima mostra o resultado da última execução.
 
 ## Protocolo de avaliação
 
-Os critérios abaixo foram fixados antes de rodar qualquer coisa, para que os
+Os critérios abaixo foram fixados antes de rodar, para que os
 números pudessem ser lidos como aprovação ou reprovação em vez de simples
 descrição.
 
@@ -83,7 +83,7 @@ monitoramento_anp.bpmn        modelo do processo
 
 ## Armadilhas dos arquivos da ANP
 
-Quem for reprocessar essa fonte vai esbarrar em duas coisas que já estão
+Quem for reprocessar essa fonte vai esbarrar em duas questões que já estão
 tratadas aqui. A agência insere linhas de metadados no topo de cada arquivo interno, e a
 concatenação dos três ambientes as multiplica. São seis registros por
 competência, 72 na série de 2022, o bastante para reprovar todas as doze na
